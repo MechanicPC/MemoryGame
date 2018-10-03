@@ -1,0 +1,98 @@
+.root{
+	-fx-background-color: transparent;
+}
+
+.main-pane{
+	-fx-background-color: #1a8a47;
+}
+
+.button-login{
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 20px;
+    -jfx-button-type: RAISED;
+    -fx-text-fill: WHITE;
+    -jfx-focus-color: #33773d;
+    -fx-background-color: #33773d
+    }
+    
+.cbox-settings{
+	-jfx-focus-color: #c9d6e8;
+	-jfx-unfocus-color: #4a86e8;
+	-jfx-label-float: false;
+	-fx-font: 20px 'Calibri';
+	-fx-pref-width:150px;
+	-fx-pref-height:60px;
+}
+
+.cbox-settings .list-cell 
+{
+    -fx-background: #1a8a47;
+    -fx-text-fill: White;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em; 
+}
+
+.txtField-settings{
+    -fx-padding: 0.7em 0.57em;
+    -fx-font:20px 'Calibri';
+    -jfx-text-type: RAISED;
+    -fx-prompt-text-fill: White;
+    -fx-text-fill:White;
+    -fx-pref-width:200px;
+	-fx-pref-height:60px;
+    }
+
+.txtField-login{
+    -fx-padding: 0.7em 0.57em;
+    -fx-font:bold 20px 'Calibri';
+    -jfx-text-type: RAISED;
+    -fx-prompt-text-fill: WHITE;
+    }
+	
+.label-settings{
+	-fx-font:bold 20px 'Calibri';	
+	-fx-pref-width:200px;
+	-fx-pref-height:60px;
+	-fx-text-fill:Black;
+	}
+
+.label-menu{
+	-fx-font:bold 15px 'Calibri';
+	-fx-text-fill:linear-gradient(#3012dd, #db13c0);
+	}
+
+.table-1 {
+    -fx-base: #33773d; /*#1d1d1d;*/
+    -fx-control-inner-background: #33773d; /*#1d1d1d;*/
+    -fx-background-color: #33773d; /*#1d1d1d;*/
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-1 .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-1 .column-header, .table-view .filler {
+    -fx-size: 17;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-1 .column-header .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-1:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}

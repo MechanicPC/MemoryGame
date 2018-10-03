@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="rootPane" maxHeight="700.0" maxWidth="800.0" minHeight="700.0" minWidth="800.0" prefHeight="700.0" prefWidth="800.0" styleClass="root" stylesheets="view/_fxmlStyleWin.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <HBox AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Rectangle fx:id="rec_settings" arcHeight="5.0" fill="#1a8a47" height="10.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle fx:id="rec_user" arcHeight="5.0" fill="#1a8a47" height="10.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle fx:id="rec_results" arcHeight="5.0" fill="#1a8a47" height="10.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcHeight="5.0" fill="#1a8a4700" height="10.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+            <Rectangle arcHeight="5.0" fill="#1a8a4700" height="10.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+         </children>
+      </HBox>
+      <AnchorPane fx:id="settingsPane" layoutY="273.0" prefHeight="500.0" styleClass="main-pane" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="63.0" layoutY="41.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label styleClass="label-settings" text="ADRES IP:" />
+                        <Label styleClass="label-settings" text="PORT:" />
+                        <Label styleClass="label-settings" text="POZIOM TRUDNOŚCI:" />
+                        <Label styleClass="label-settings" text="KATEGORIA KART:" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <JFXTextField fx:id="txtFieldIPAddress" promptText="Adres IP" styleClass="txtField-settings" />
+                        <JFXTextField fx:id="txtFieldPort" promptText="port" styleClass="txtField-settings" />
+                        <JFXComboBox fx:id="cbox_difficulty" minWidth="75.0" styleClass="cbox-settings" />
+                        <JFXComboBox fx:id="cbox_category" minWidth="100.0" styleClass="cbox-settings" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuPane" layoutX="300.0" layoutY="-59.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" prefWidth="200.0" styleClass="main-pane" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img_settings" fitHeight="64.0" fitWidth="53.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image_res/settings.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="label-menu" text="Ustawienia" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img_user" fitHeight="64.0" fitWidth="53.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image_res/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="label-menu" text="Gra" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img_results" fitHeight="64.0" fitWidth="53.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image_res/trophy.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="label-menu" text="Wyniki" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img_close" fitHeight="64.0" fitWidth="53.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image_res/close.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="label-menu" text="Koniec gry" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img_exit" fitHeight="64.0" fitWidth="53.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image_res/exit.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="label-menu" text="Wyjście" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+      <AnchorPane fx:id="resultsPane" layoutY="273.0" prefHeight="500.0" styleClass="main-pane" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+         <children>
+            <TableView fx:id="tableResults" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" styleClass="table-1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="colPlayer1" prefWidth="75.0" text="Gracz 1" />
+                  <TableColumn fx:id="colPlayer2" prefWidth="75.0" text="Gracz 2" />
+                  <TableColumn fx:id="colResult" prefWidth="75.0" text="Wynik" />
+                  <TableColumn fx:id="colData" prefWidth="75.0" text="Data" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="gamePane" layoutY="273.0" prefHeight="600.0" prefWidth="800.0" styleClass="main-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="userPane" layoutY="273.0" prefHeight="500.0" styleClass="main-pane" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="215.0" layoutX="161.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="Image_res/user_login.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtFieldUser" alignment="CENTER" layoutX="150.0" layoutY="260.0" prefHeight="58.0" prefWidth="200.0" promptText="User" styleClass="txtField-login" />
+            <JFXButton fx:id="btnCreateGame" layoutX="162.0" layoutY="366.0" onAction="#btnCreateGame" prefHeight="58.0" prefWidth="179.0" styleClass="button-login" text="Graj!" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
